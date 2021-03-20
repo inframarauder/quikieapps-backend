@@ -10,11 +10,10 @@ exports.createRecord = async (req, res) => {
   }
 };
 
-exports.getRecord = async (req, res) => {
+exports.listRecords = async (req, res) => {
   try {
-    const { stockSymbol } = req.params;
-    const stockdata = await Stockdata.findOne({ stockSymbol }).lean();
-    return res.status(200).json(stockdata);
+    const records = await Stockdata.find({}).lean();
+    return res.status(200).json(records);
   } catch (error) {
     console.error(error);
     return res.status(500).json({ error: "Internal Server Error!" });

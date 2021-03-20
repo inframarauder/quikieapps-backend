@@ -1,22 +1,26 @@
 const { Schema, model } = require("mongoose");
 
 const stockdataSchema = new Schema({
-  companyName: {
+  company_name: {
     type: String,
     required: true,
   },
-  stockSymbol: {
+  symbol: {
     type: String,
     required: true,
     unique: true,
   },
-  marketCap: {
+  market_cap: {
     type: String,
     required: true,
   },
-  stockPrice: {
-    type: Number,
+  price: {
+    type: String,
     required: true,
+  },
+  saved: {
+    type: Boolean,
+    default: true,
   },
 });
 
