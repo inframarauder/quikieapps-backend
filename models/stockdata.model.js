@@ -8,7 +8,6 @@ const stockdataSchema = new Schema({
   symbol: {
     type: String,
     required: true,
-    unique: true,
   },
   market_cap: {
     type: String,

@@ -2,8 +2,8 @@ const Stockdata = require("../models/stockdata.model");
 
 exports.createRecord = async (req, res) => {
   try {
-    await new Stockdata(req.body).save();
-    return res.status(201).json({ message: "Stock data saved to DB!" });
+    const stock = await new Stockdata(req.body).save();
+    return res.status(201).json(stock);
   } catch (error) {
     console.error(error);
     return res.status(500).json({ error: "Internal Server Error!" });
