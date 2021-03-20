@@ -1,0 +1,27 @@
+{
+  "name": "quikieapps-backend",
+  "version": "1.0.0",
+  "description": "Backend code for the assignment of QuikieApps",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/subhasis020299/quikieapps-backend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/subhasis020299/quikieapps-backend/issues"
+  },
+  "homepage": "https://github.com/subhasis020299/quikieapps-backend#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.12.1"
+  }
+}
